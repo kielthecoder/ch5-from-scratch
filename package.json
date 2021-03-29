@@ -9,7 +9,8 @@
   "author": "Kiel Lofstrand",
   "license": "MIT",
   "dependencies": {
-    "@crestron/ch5-crcomlib": "^1.1.0"
+    "@crestron/ch5-crcomlib": "^1.1.0",
+    "lodash": "^4.17.21"
   },
   "devDependencies": {
     "webpack": "^5.28.0",
