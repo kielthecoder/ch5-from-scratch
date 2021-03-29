@@ -4,7 +4,8 @@
   "description": "A very simple CH5 starting point",
   "private": true,
   "scripts": {
-    "build": "webpack --config webpack.config.js"
+    "build": "webpack --config webpack.config.js",
+    "watch": "webpack --config webpack.config.js --watch"
   },
   "author": "Kiel Lofstrand",
   "license": "MIT",
