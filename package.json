@@ -4,7 +4,7 @@
   "description": "A very simple CH5 starting point",
   "private": true,
   "scripts": {
-    "serve": "webpack --config webpack.js"
+    "build": "webpack --config webpack.config.js"
   },
   "author": "Kiel Lofstrand",
   "license": "MIT",
@@ -13,6 +13,8 @@
     "lodash": "^4.17.21"
   },
   "devDependencies": {
+    "css-loader": "^5.2.0",
+    "style-loader": "^2.0.0",
     "webpack": "^5.28.0",
     "webpack-cli": "^4.6.0"
   }
