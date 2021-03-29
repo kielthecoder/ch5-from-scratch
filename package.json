@@ -5,7 +5,8 @@
   "private": true,
   "scripts": {
     "build": "webpack --config webpack.config.js",
-    "watch": "webpack --config webpack.config.js --watch"
+    "watch": "webpack --config webpack.config.js --watch",
+    "serve": "webpack serve --config webpack.config.js --open"
   },
   "author": "Kiel Lofstrand",
   "license": "MIT",
