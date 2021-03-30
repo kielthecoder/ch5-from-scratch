@@ -2,9 +2,10 @@ const path = require('path');
 const glob = require('glob');
 
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const ConcatPlugin = require('webpack-concat-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-const CrComLib = glob.sync('./node_modules/@crestron/ch5-crcomlib/build_bundles/umd/cr-com-lib.js');
+const ConcatPlugin = require('webpack-concat-files-plugin');
+
+const CrComLibLibrary = glob.sync('./node_modules/@crestron/ch5-crcomlib/build_bundles/umd/cr-com-lib.js');
 
 module.exports = {
     mode: 'development',
@@ -16,10 +17,7 @@ module.exports = {
         rules: [
             {
                 test: /.css$/,
-                use: [
-                    MiniCssExtractPlugin.loader,
-                    "css-loader"
-                ]
+                use: [MiniCssExtractPlugin.loader, "css-loader"]
             }
         ]
     },
@@ -30,6 +28,15 @@ module.exports = {
         }),
         new MiniCssExtractPlugin({
             filename: 'styles.css'
+        }),
+        new ConcatPlugin({
+            bundles: [
+                {
+                    src: CrComLibLibrary,
+                    dest: './dist/cr-com-lib.js'
+                }
+            ],
+            allowOptimization: true
         })
     ],
     output: {
