@@ -1,20 +1,17 @@
 import _ from 'lodash';
+import { markdown } from 'markdown';
+
 import './style.css';
 
-import CrestronLogo from './crestron.png';
+window.onload = function() {
+    document.querySelector('#editor').addEventListener(
+        'submit',
+        function (e) {
+            e.preventDefault();
 
-function component() {
-    const element = document.createElement('div');
+            let text = document.querySelector('#source').value;
+            let preview = document.querySelector('#preview');
 
-    element.innerHTML = _.join(['Hello', 'World'], ' ');
-    element.classList.add('hello');
-
-    const logo = new Image();
-    logo.src = CrestronLogo;
-
-    element.appendChild(logo);
-
-    return element;
-}
-
-document.body.appendChild(component());
+            preview.innerHTML = markdown.toHTML(text);
+        });
+};
