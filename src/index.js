@@ -1,11 +1,17 @@
 import _ from 'lodash';
+import { markdown } from 'markdown';
 
-function component() {
-    const element = document.createElement('div');
+import './style.css';
 
-    element.innerHTML = _.join(['Hello', 'World'], ' ');
+window.onload = function() {
+    document.querySelector('#editor').addEventListener(
+        'submit',
+        function (e) {
+            e.preventDefault();
 
-    return element;
-}
+            let text = document.querySelector('#source').value;
+            let preview = document.querySelector('#preview');
 
-document.body.appendChild(component());
+            preview.innerHTML = markdown.toHTML(text);
+        });
+};
