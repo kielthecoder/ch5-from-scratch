@@ -15,11 +15,8 @@
     "lodash": "^4.17.21"
   },
   "devDependencies": {
-<<<<<<< HEAD
-    "copy-webpack-plugin": "^8.1.0",
-=======
     "@crestron/ch5-utilities-cli": "^0.1.52",
->>>>>>> part-3
+    "copy-webpack-plugin": "^8.1.0",
     "css-loader": "^5.2.0",
     "html-webpack-plugin": "^5.3.1",
     "style-loader": "^2.0.0",
