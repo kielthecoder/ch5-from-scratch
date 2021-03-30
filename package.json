@@ -13,12 +13,9 @@
     "lodash": "^4.17.21"
   },
   "devDependencies": {
-<<<<<<< HEAD
+    "@crestron/ch5-utilities-cli": "^0.1.52",
     "css-loader": "^5.2.0",
     "style-loader": "^2.0.0",
-=======
-    "@crestron/ch5-utilities-cli": "^0.1.52",
->>>>>>> part-1
     "webpack": "^5.28.0",
     "webpack-cli": "^4.6.0"
   }
