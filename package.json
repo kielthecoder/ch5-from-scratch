@@ -13,6 +13,7 @@
     "lodash": "^4.17.21"
   },
   "devDependencies": {
+    "@crestron/ch5-utilities-cli": "^0.1.52",
     "webpack": "^5.28.0",
     "webpack-cli": "^4.6.0"
   }
