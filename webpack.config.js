@@ -1,12 +1,10 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const ConcatPlugin = require('webpack-concat-plugin');
 
 module.exports = {
     mode: 'development',
-    entry: {
-        index: './src/index.js',
-        print: './src/print.js'
-    },
+    entry: './src/index.js',
     devServer: {
         contentBase: './dist'
     },
